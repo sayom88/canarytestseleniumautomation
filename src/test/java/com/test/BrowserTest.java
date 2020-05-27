@@ -45,7 +45,7 @@ public class BrowserTest {
 		
 		 driver.get("http://150.238.42.188:32591/");
 		 
-		     String exp_text = "Guestbook - v1";
+		     String exp_text = "Guestbook - v2";
 	         WebElement exp_value = driver.findElement(By.xpath(".//div[@id='header']/h1[1]"));
 	         String screen_text = exp_value.getText();
 	         //String screen_text = search_button.getAttribute("value");
