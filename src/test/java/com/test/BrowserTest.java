@@ -21,7 +21,7 @@ public class BrowserTest {
 	@Before
 	public void setUp()
 	{
-		//System.setProperty("webdriver.chrome.driver", "C:/ECLIPSE_WORKSPACE/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/ECLIPSE_WORKSPACE/chromedriver.exe");
 		//String driverPath = System.getProperty("user.dir");
 		
 		ChromeOptions options = new ChromeOptions()
@@ -42,18 +42,37 @@ public class BrowserTest {
 	public void testGooglePage()
 	{
 		
-		
+		/*
 		 driver.get("http://150.238.42.188:32591/");
 		 
-		     String exp_text = "Guestbook - v4(Canary)";
+		     String exp_text = "Guestbook - v4";
 	         WebElement exp_value = driver.findElement(By.xpath(".//div[@id='header']/h1[1]"));
 	         String screen_text = exp_value.getText();
 	         //String screen_text = search_button.getAttribute("value");
              System.out.println(screen_text);
              
 	         Assert.assertEquals("******** TEXT MISMATCH::  "+exp_text+" IS NOT EQUAL TO "+ screen_text+" ********",exp_text, screen_text);
-	        
-	         
+	      */
+		
+		// OPENSHIFT-CANARY TESTING
+				 driver.get("http://app-main-url-canarydeployment.apps.us-east-2.starter.openshift-online.com/");
+				 
+				     String exp_text = "Stable-Version";
+			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
+			         String screen_text = exp_value.getText();
+			         //String screen_text = search_button.getAttribute("value");
+		             //System.out.println(screen_text);
+		             
+		             boolean b=false;
+		             if(screen_text.contains(exp_text))
+		             {
+		            	 b=true;
+		            
+		             }
+		           
+				
+		             String msg="******** TEXT COMPARISON UN-SUCCESSFULL ::  "+exp_text+" IS NOT PRESENT IN "+ screen_text+" ********";
+		             Assert.assertTrue(msg,b );
 	         /*
 	      // Create object of Property file
 	         Properties props = new Properties();
