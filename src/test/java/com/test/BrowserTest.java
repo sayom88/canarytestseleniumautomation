@@ -21,7 +21,7 @@ public class BrowserTest {
 	@Before
 	public void setUp()
 	{
-		//System.setProperty("webdriver.chrome.driver", "C:/ECLIPSE_WORKSPACE/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/ECLIPSE_WORKSPACE/chromedriver.exe");
 		//String driverPath = System.getProperty("user.dir");
 		
 		ChromeOptions options = new ChromeOptions()
