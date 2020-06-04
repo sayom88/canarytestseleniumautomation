@@ -54,10 +54,32 @@ public class BrowserTest {
 	         Assert.assertEquals("******** TEXT MISMATCH::  "+exp_text+" IS NOT EQUAL TO "+ screen_text+" ********",exp_text, screen_text);
 	      */
 		
-		// OPENSHIFT-CANARY TESTING
+		/*
+		// OPENSHIFT-CANARY TESTING(MANUAL)
 				 driver.get("http://app-main-url-canarydeployment.apps.us-east-2.starter.openshift-online.com/");
 				 
 				     String exp_text = "Stable-Version";
+			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
+			         String screen_text = exp_value.getText();
+			         //String screen_text = search_button.getAttribute("value");
+		             //System.out.println(screen_text);
+		             
+		             boolean b=false;
+		             if(screen_text.contains(exp_text))
+		             {
+		            	 b=true;
+		            
+		             }
+		           
+				
+		             String msg="******** TEXT COMPARISON UN-SUCCESSFULL ::  "+exp_text+" IS NOT PRESENT IN "+ screen_text+" ********";
+		             Assert.assertTrue(msg,b );
+	          */
+		
+		// OPENSHIFT-CANARY TESTING(TEKTON PIPELINES)
+				 driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
+				 
+				     String exp_text = "Hello from NodeJS Playground! TEKTON_101_ENV_EXAMPLE";
 			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
 			         String screen_text = exp_value.getText();
 			         //String screen_text = search_button.getAttribute("value");
