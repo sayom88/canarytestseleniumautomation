@@ -79,14 +79,14 @@ public class BrowserTest {
 		// OPENSHIFT-CANARY TESTING(TEKTON PIPELINES)
 				 driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
 				 
-				     String exp_text = "Hello from NodeJS Playground! TEKTON_101_ENV_EXAMPLE";
+				     String exp_text = "Hello from NodeJS Playground1! TEKTON_101_ENV_EXAMPLE";
 			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
 			         String screen_text = exp_value.getText();
 			         //String screen_text = search_button.getAttribute("value");
 		             //System.out.println(screen_text);
 		             
 		             boolean b=false;
-		             if(screen_text.contains(exp_text))
+		             if(screen_text.equals(exp_text))
 		             {
 		            	 b=true;
 		            
