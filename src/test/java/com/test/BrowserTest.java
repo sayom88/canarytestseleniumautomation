@@ -54,9 +54,9 @@ public class BrowserTest {
 	         Assert.assertEquals("******** TEXT MISMATCH::  "+exp_text+" IS NOT EQUAL TO "+ screen_text+" ********",exp_text, screen_text);
 	      */
 		
-		/*
+		
 		// OPENSHIFT-CANARY TESTING(MANUAL)
-				 driver.get("http://app-main-url-canarydeployment.apps.us-east-2.starter.openshift-online.com/");
+				 driver.get("http://app-main-url-canarydeployment1.apps.us-east-2.starter.openshift-online.com/");
 				 
 				     String exp_text = "Stable-Version";
 			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
@@ -74,8 +74,8 @@ public class BrowserTest {
 				
 		             String msg="******** TEXT COMPARISON UN-SUCCESSFULL ::  "+exp_text+" IS NOT PRESENT IN "+ screen_text+" ********";
 		             Assert.assertTrue(msg,b );
-	          */
-		
+	          
+		/*
 		// OPENSHIFT-CANARY TESTING(TEKTON PIPELINES)
 				 driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
 				 
@@ -95,6 +95,8 @@ public class BrowserTest {
 				
 		             String msg="******** TEXT COMPARISON UN-SUCCESSFULL ::  "+exp_text+" IS NOT PRESENT IN "+ screen_text+" ********";
 		             Assert.assertTrue(msg,b );
+			     
+			     */
 	         /*
 	      // Create object of Property file
 	         Properties props = new Properties();
