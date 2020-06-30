@@ -18,11 +18,16 @@ public class BrowserTest {
 	
 	private WebDriver driver;
 	
+	String url;
+	
 	@Before
 	public void setUp()
 	{
 		//System.setProperty("webdriver.chrome.driver", "C:/ECLIPSE_WORKSPACE/chromedriver.exe");
 		//String driverPath = System.getProperty("user.dir");
+		
+		url=System.getProperty("WSHELL_URL");
+		System.out.println("The URL Is:"+url);
 		
 		ChromeOptions options = new ChromeOptions()
 			.setHeadless(true);
@@ -79,7 +84,9 @@ public class BrowserTest {
 	          
 		
 		// OPENSHIFT-CANARY TESTING(TEKTON PIPELINES)
-				 driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
+		
+		driver.get(url);
+		//driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
 				 
 				     String exp_text = "Hello from NodeJS Playground1! TEKTON_101_ENV_EXAMPLE";
 			         WebElement exp_value = driver.findElement(By.xpath(".//html[1]/body[1]"));
