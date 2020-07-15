@@ -54,7 +54,7 @@ public class BrowserTest {
 	         WebElement exp_value = driver.findElement(By.xpath(".//div[@id='header']/h1[1]"));
 	         String screen_text = exp_value.getText();
 	         //String screen_text = search_button.getAttribute("value");
-             System.out.println(screen_text);
+             System.out.println("The Screen Text Is:"+screen_text);
              
 	         Assert.assertEquals("******** TEXT MISMATCH::  "+exp_text+" IS NOT EQUAL TO "+ screen_text+" ********",exp_text, screen_text);
 	      
