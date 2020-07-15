@@ -47,7 +47,7 @@ public class BrowserTest {
 	public void testPage()
 	{
 		
-		/*
+		
 		 driver.get("http://150.238.42.188:32591/");
 		 
 		     String exp_text = "Guestbook - v4(Canary)";
@@ -57,7 +57,7 @@ public class BrowserTest {
              System.out.println(screen_text);
              
 	         Assert.assertEquals("******** TEXT MISMATCH::  "+exp_text+" IS NOT EQUAL TO "+ screen_text+" ********",exp_text, screen_text);
-	      */
+	      
 		
 		/*
 		// OPENSHIFT-CANARY TESTING(MANUAL)
@@ -85,6 +85,7 @@ public class BrowserTest {
 		
 		// OPENSHIFT-CANARY TESTING(TEKTON PIPELINES)
 		
+		/*
 		driver.get(url);
 		//driver.get("https://app-main-https-sayoghos-in-second.dc-ig-lib-ga-1589529604-f72ef11f3ab089a8c677044eb28292cd-0000.au-syd.containers.appdomain.cloud/");
 				 
@@ -104,7 +105,7 @@ public class BrowserTest {
 				
 		             String msg="******** TEXT COMPARISON UN-SUCCESSFULL ::  "+exp_text+" IS NOT PRESENT IN "+ screen_text+" ********";
 		             Assert.assertTrue(msg,b );
-			     
+			*/     
 			     
 	         /*
 	      // Create object of Property file
